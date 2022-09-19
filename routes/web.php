@@ -19,5 +19,3 @@ Route::post('/home', [ApiController::class, 'openTrade']);
 
 
 
-
-

@@ -26,9 +26,12 @@ class HomeController extends Controller
     {
        
         $currencies = TradeBybitFacade::getList();
+
         return view('/home')->with('currencies',$currencies);
      
     }
     
+
+
     
 }

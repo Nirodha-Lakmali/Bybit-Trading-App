@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "google/cloud-functions-framework": "^1.1",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
@@ -27,7 +28,8 @@
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
             "domain\\": "domain/",
-            "infrastructure\\": "infrastructure/"
+            "infrastructure\\": "infrastructure/",
+            "cloud-functions\\": "cloud-functions/"
         }
     },
     "autoload-dev": {
@@ -65,4 +67,6 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true
+
+    
 }

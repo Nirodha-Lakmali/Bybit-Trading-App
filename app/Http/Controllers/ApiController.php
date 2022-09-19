@@ -1,35 +1,25 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Session;    
 use infrastructure\Facades\ApiBybitFacade;
 use infrastructure\Facades\TradeBybitFacade;
+use App\Models\Trade;   
+use App\Models\Symbol;
 
 class ApiController extends Controller
 {
- 
+
     public function openTrade(Request $request)
     {
-        $key = $request->currency;
+        $symbol = $request->symbol;
         $leverage = $request->leverage;
-        $side = $request->side;
-        $qty = $request->quantity;
-        $price  = $request->price;
-        
-        $mark_prices = TradeBybitFacade::getMarketPrice();
-        $mark_price = $mark_prices[$key]->mark_price;
- 
-        $symbol = TradeBybitFacade::getSymbol($key);
+        Trade::create($request->all());
         TradeBybitFacade::changeLeverage($symbol,$leverage);
-
-        if($price >= $mark_price){
-            TradeBybitFacade::trade($side,$symbol,$qty,$price);
-        }
      
-        return redirect('home');
+        return redirect('home')->with('success','Trade Data successfully inserted!');
         
     }
-    
+
+
 }

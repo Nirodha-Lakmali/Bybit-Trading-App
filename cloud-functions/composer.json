@@ -1,0 +1,14 @@
+{
+    "require": {
+        "php": ">= 7.4",
+        "google/cloud-functions-framework": "^1.1"
+    },
+    "scripts": {
+        "start": [
+           "Composer\\Config::disableProcessTimeout",
+           "FUNCTION_TARGET=openTrade php -S localhost:${PORT:-8080} vendor/google/cloud-functions-framework/router.php",
+           "FUNCTION_TARGET=setLeverage php -S localhost:${PORT:-8081} vendor/google/cloud-functions-framework/router.php",
+           "FUNCTION_TARGET=closeTrading php -S localhost:${PORT:-8082} vendor/google/cloud-functions-framework/router.php"
+        ]
+    }
+}

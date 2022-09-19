@@ -15,8 +15,6 @@ class ApiBybitService{
     public function getApi($method,$params,$url)
     {
              
-        //$url = 'https://api.bybit.com/v2/private/linear/order/create';
-            
         $public_key = config('services.bybit.key');
         $secret_key = config('services.bybit.secret');
         $qs=$this->get_signed_params($public_key, $secret_key, $params);
@@ -33,7 +31,8 @@ class ApiBybitService{
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
         #curl_setopt($curl, CURLOPT_PROXY,"127.0.0.1:1087");
         //return 
-        $response=curl_exec($curl);
+        $response = curl_exec($curl);
+       
         return json_decode($response);
        
     // return view('bybit-buy');
