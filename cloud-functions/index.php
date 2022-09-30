@@ -48,17 +48,19 @@ function setLeverage(ServerRequestInterface $request): string
 {
 
     $symbol = '';
+
     $queryString = $request->getQueryParams();
     $symbol = $queryString['symbol'] ?? $symbol;
 
     $url = 'https://api-testnet.bybit.com/private/linear/position/set-leverage';
+
     $params = [
         'symbol'=>$symbol,
         'buy_leverage'=>5,
         'sell_leverage'=>5,
         'timestamp' => time() * 1000,
     ];
-        
+
     $method = 'POST';
 
     return setApi($method,$params,$url);

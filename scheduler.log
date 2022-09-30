@@ -1,0 +1,170 @@
+-22.576831480221
+-21.519338809307
+-21.520649223997
+-22.095080532131
+-22.028165755535
+-20.908661995187
+-20.921387900236
+-21.684942203164
+-21.969163977597
+-20.90839679564
+-20.921122694188
+-21.684942203164
+{#760
+  +"order_id": "ac0e7f73-30fc-4179-b54e-6a94172cc8a8"
+  +"user_id": 670453
+  +"symbol": "ETHUSDT"
+  +"side": "Buy"
+  +"order_type": "Market"
+  +"price": 1407
+  +"qty": 0.01
+  +"time_in_force": "ImmediateOrCancel"
+  +"order_status": "Created"
+  +"last_exec_price": 0
+  +"cum_exec_qty": 0
+  +"cum_exec_value": 0
+  +"cum_exec_fee": 0
+  +"reduce_only": false
+  +"close_on_trigger": false
+  +"order_link_id": ""
+  +"created_time": "2022-09-30T08:18:02Z"
+  +"updated_time": "2022-09-30T08:18:02Z"
+  +"take_profit": 0
+  +"stop_loss": 0
+  +"tp_trigger_by": "UNKNOWN"
+  +"sl_trigger_by": "UNKNOWN"
+  +"position_idx": 1
+}
+-21.911769686442
+-20.855627477398
+-20.868352082326
+-21.648558062047
+-49.329760633325
+-21.951625489235
+-20.895402349753
+-20.92085748841
+-21.764633294643
+-24.910322837784
+-22.17759046504
+-21.110822850923
+-21.123553711866
+-21.831326948021
+-24.910322837784
+-22.257389690212
+-21.213024377296
+-21.213278732204
+-21.977262360015
+-24.968887241963
+-22.329762144804
+-21.260820710453
+-21.273555248536
+-22.13897678923
+-24.968887241963
+-22.643431215276
+-21.585803308203
+-21.598545813108
+-22.41715851154
+-24.968887241963
+-22.647960615805
+-21.590323511418
+-21.63018966237
+-22.394786499697
+-24.968887241963
+-22.191952519623
+-21.13524137663
+-21.171066946855
+-21.889797607958
+-24.633295804711
+-22.331624936866
+-21.26002403282
+-21.272758551372
+-21.990557450725
+-24.890804283268
+-22.206847339519
+-21.164174993412
+-21.146911087376
+-21.992418817657
+-24.910322837784
+-22.244088119816
+-21.214882959212
+-21.227616371149
+-21.937381165092
+-24.828354695691
+-22.545668654518
+-21.480531403087
+-21.482905692045
+-22.133921691374
+-25.027464760511
+-22.504124021175
+-21.44677898865
+-21.425769227661
+-22.092686403837
+-25.144659158342
+
+   ErrorException 
+
+  Attempt to read property "result" on null
+
+  at C:\xampp\htdocs\project-three\trading-project\infrastructure\TradeBybitService.php:59
+     55▕             'symbol'=>$symbol
+     56▕         ];
+     57▕  
+     58▕         $method = 'GET';
+  ➜  59▕         $results = ApiBybitFacade::getApi($method,$params,$url)->result;            
+     60▕         $mark_price = $results[0]->mark_price;
+     61▕ 
+     62▕         return $mark_price;      
+     63▕     }
+
+  1   C:\xampp\htdocs\project-three\trading-project\infrastructure\TradeBybitService.php:59
+      Illuminate\Foundation\Bootstrap\HandleExceptions::Illuminate\Foundation\Bootstrap\{closure}("Attempt to read property "result" on null", "C:\xampp\htdocs\project-three\trading-project\infrastructure\TradeBybitService.php")
+
+  2   C:\xampp\htdocs\project-three\trading-project\infrastructure\TradeBybitService.php:104
+      infrastructure\TradeBybitService::getMarketPrice("BTCUSDT")
+
+   ErrorException 
+
+  Attempt to read property "result" on null
+
+  at C:\xampp\htdocs\project-three\trading-project\infrastructure\TradeBybitService.php:59
+     55▕             'symbol'=>$symbol
+     56▕         ];
+     57▕  
+     58▕         $method = 'GET';
+  ➜  59▕         $results = ApiBybitFacade::getApi($method,$params,$url)->result;            
+     60▕         $mark_price = $results[0]->mark_price;
+     61▕ 
+     62▕         return $mark_price;      
+     63▕     }
+
+  1   C:\xampp\htdocs\project-three\trading-project\infrastructure\TradeBybitService.php:59
+      Illuminate\Foundation\Bootstrap\HandleExceptions::Illuminate\Foundation\Bootstrap\{closure}("Attempt to read property "result" on null", "C:\xampp\htdocs\project-three\trading-project\infrastructure\TradeBybitService.php")
+
+  2   C:\xampp\htdocs\project-three\trading-project\infrastructure\TradeBybitService.php:104
+      infrastructure\TradeBybitService::getMarketPrice("BTCUSDT")
+
+   ErrorException 
+
+  Attempt to read property "result" on null
+
+  at C:\xampp\htdocs\project-three\trading-project\infrastructure\TradeBybitService.php:59
+     55▕             'symbol'=>$symbol
+     56▕         ];
+     57▕  
+     58▕         $method = 'GET';
+  ➜  59▕         $results = ApiBybitFacade::getApi($method,$params,$url)->result;            
+     60▕         $mark_price = $results[0]->mark_price;
+     61▕ 
+     62▕         return $mark_price;      
+     63▕     }
+
+  1   C:\xampp\htdocs\project-three\trading-project\infrastructure\TradeBybitService.php:59
+      Illuminate\Foundation\Bootstrap\HandleExceptions::Illuminate\Foundation\Bootstrap\{closure}("Attempt to read property "result" on null", "C:\xampp\htdocs\project-three\trading-project\infrastructure\TradeBybitService.php")
+
+  2   C:\xampp\htdocs\project-three\trading-project\infrastructure\TradeBybitService.php:104
+      infrastructure\TradeBybitService::getMarketPrice("BTCUSDT")
+-22.638369037318
+-21.580751409408
+-21.584453573992
+-22.274702969606
+-25.023559184517

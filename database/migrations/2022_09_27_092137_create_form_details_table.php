@@ -13,17 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('trades', function (Blueprint $table) {
+        Schema::create('form_details', function (Blueprint $table) {
             $table->id();
-            $table->string('order_id');
             $table->string('symbol'); //symbol id
             $table->string('side'); //buy or sell
             $table->float('qty');
-            $table->string('order_type');
             $table->double('price');
-            $table->float('repurchase');
             $table->integer('leverage');
-            $table->string('order_status');//New,Filled
+            $table->float('repurchase');
             $table->timestamps();
         });
     }
@@ -35,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trades');
+        Schema::dropIfExists('form_details');
     }
 };

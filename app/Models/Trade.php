@@ -12,13 +12,29 @@ class Trade extends Model
     protected $table = 'trades';
 
     protected $fillable = [
-        'symbol','leverage','side','qty','price'
+        'order_id','symbol','side','qty','order_type','price','repurchase','leverage','order_status'
     ];
+
+    static function insertData($list,$repurchase,$leverage){
+
+        $list->repurchase = $repurchase;
+        $list->leverage = $leverage;
+        //$new_row = array_push((array)$list,$repurchase);
+        self::create((array)$list);
+    }
 
     static function getData()
     {
-        $row = DB::table('trades')->select('id','symbol', 'price','qty','side')->get();
+        $row = DB::table('trades')->select('id','order_id','symbol','side','qty','order_type','price','repurchase','leverage','order_status')->get();
         return $row;
+    }
+
+    static function updateLeverage($id){
+        DB::table('trades')->where('id', $id)->update(['leverage' => 5]);
+    }
+
+    static function updateStatus($id,$status){
+        DB::table('trades')->where('id', $id)->update(['order_status' => "closed"]);
     }
 
     static function deleteTrade($id)

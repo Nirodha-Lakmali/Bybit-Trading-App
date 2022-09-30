@@ -15,6 +15,7 @@ Auth::routes(
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::post('/home', [ApiController::class, 'openTrade']);
 
+Route::get('/', [ApiController::class, 'getData']);
 
 
 

@@ -4,14 +4,14 @@ function setApi($method,$params,$url)
 {
     $public_key = 'StddrxeIdCI2ZwSXnQ';
     $secret_key = 'n1bFbH8cUJhF4BmF7aHy5jtdtw0z4wjfbfWI';
-
+  
     $qs=get_signed_params($public_key, $secret_key, $params);
     $curl_url=$url."?".$qs;
     $curl=curl_init($curl_url);
-    //echo $curl_url;
+ 
     curl_setopt($curl, CURLOPT_URL, $curl_url);
     curl_setopt($curl, CURLOPT_POST, $method == "POST" ? true : false);
-    #curl_setopt($curl, CURLOPT_POSTFIELDS, $qs);
+    //curl_setopt($curl, CURLOPT_POSTFIELDS, $qs);
     // curl_setopt($curl, CURLOPT_POST, true);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);

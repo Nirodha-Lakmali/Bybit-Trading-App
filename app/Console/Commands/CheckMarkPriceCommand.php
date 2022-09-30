@@ -26,9 +26,10 @@ class CheckMarkPriceCommand extends Command
      *
      * @return int
      */
+
+
     public function handle()
     {
-       
         TradeBybitFacade::checkCondition();
         TradeBybitFacade::getTradeList();
        
